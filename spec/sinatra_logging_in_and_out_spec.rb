@@ -24,6 +24,7 @@ describe 'ApplicationController' do
       params = {
         "username"=> "skittles123", "password" => "iluvskittles"
       }
+
       post '/login', params
       expect(last_response.status).to eq(302)
     end

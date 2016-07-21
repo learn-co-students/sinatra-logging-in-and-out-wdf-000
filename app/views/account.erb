@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
-  </head>
-  <body id="page-top">
-    
-
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>title</title>
+		<link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">	
+	</head>
+	<body id="page-top">
+		<h1>Welcome <%= @user.username %></h1>
+		<h3>Your Balance: <%= @user.balance %></h3>
+		<h3><input type="submit" value="Log Out"></h3>
+	</body>
 </html>
