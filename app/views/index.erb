@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
-  </head>
-  <body id="page-top">
-    <h1>Welcome to FlatBank</h1>
-    <h3>Log In Please</h3>
-
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>title</title>
+		<link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">	
+	</head>
+	<body id="page-top">
+		<h1>Welcome to FlatBank</h1>
+		<h3>Log In Please</h3>
+	<form method="POST" action="/login">
+		<h3>User Name: <input type="text" name="username"></h3>
+		<h3>Password: <input type="text" name="password"></h3>
+		<h3><input type="submit" value="Log In"></h3>
+	</form>
+	</body>
 </html>
