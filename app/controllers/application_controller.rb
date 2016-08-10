@@ -20,8 +20,17 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  get '/registrations/signup' do
+    erb :'/registrations/signup'
+  end
+
+  post '/registrations' do
+    @user = User.create(params[:user])
+    session[:user_id] = @user.id
+    redirect '/account'
+  end
+
   get '/account' do
-      binding.pry
     if Helpers.is_logged_in?(session)
       @user = Helpers.current_user(session)
       erb :account
