@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
+
+    <h1>Welcome <%= @user.username %></h1>
     
+    <h3>Your Balance: <%= @user.balance %></h3>
+    <br>
+    <a href="/logout">Log Out</a>
 
   </body>
 </html>
+
+expect(last_response.body).to include("<h1>Welcome skittles123</h1>")
+expect(last_response.body).to include("<h3>Your Balance: 1000.0</h3>")
